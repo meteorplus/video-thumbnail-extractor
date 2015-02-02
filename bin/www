@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var app = require('../lib/app');
+
+var port = process.env.PORT || 3015;
+
+app.listen(port, function (err) {
+  if (err) throw err;
+  console.log('Video thumbnail extractor listening on port %s', port);
+});
