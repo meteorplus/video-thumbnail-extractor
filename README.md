@@ -27,15 +27,18 @@ Here's how to encrypt a URL:
 var crypto = require('crypto');
 
 var hostname = 'http://localhost:3000';
+var password = 'some-password-you-set';
 
 function encrypt(url) {
   var cipher = crypto.createCipher('aes256', password);
   var buffers = [];
   buffers.push(cipher.update(url));
   buffers.push(cipher.final());
-  return hostname + Buffer.concat(buffers).toString('hex');
+  return hostname + '/' + Buffer.concat(buffers).toString('hex');
 }
 ```
+
+Now accessing `encrypt(url) + '?frame=' + index` will return the image at a specific index.
 
 [gitter-image]: https://badges.gitter.im/mgmtio/video-thumbnail-extractor.png
 [gitter-url]: https://gitter.im/mgmtio/video-thumbnail-extractor
