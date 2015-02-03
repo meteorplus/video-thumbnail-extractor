@@ -15,12 +15,13 @@ Dynamically extract thumbnails and tags from an image.
 
 `url` should be `encodeURIComponent`ed.
 `frame` defaults to `0`.
+`x`, `y`, `width`, and `height` must all be defined to be valid.
 Returns a `jpeg` image.
 
-## GET /:encryptedUrl
+## GET /:encryptedUrl?frame=&x=&y=&width=&height=
 
-Same as above, but with encrypting the URLs.
-This is so people don't know the original video URL.
+Same as above, but with encrypting the URLs instead of encoding.
+This is so people don't know the original video URL as well as not allow arbitrary videos.
 Here's how to encrypt a URL:
 
 ```js
