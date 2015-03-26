@@ -8,7 +8,7 @@
   "dependencies": {
     "download-cache": "^1.1.0",
     "http-assert": "^1.1.0",
-    "koa": "^0.16.0",
+    "koa": "0",
     "koa-favicon": "^1.2.0",
     "koa-json-error": "^1.0.1",
     "mz": "^1.2.1",
