@@ -13,29 +13,18 @@ it('GET /:url?frame=', function (done) {
   request(server)
   .get('/' + encodeURIComponent(img))
   .query({
-    frame: 1
+    frame: Math.ceil(1000 * Math.random())
   })
   .expect(200)
   .expect('Content-Type', 'image/jpeg')
   .end(done);
 })
 
-it('GET /:url?ms=x000', function (done) {
+it('GET /:url?ms=', function (done) {
   request(server)
   .get('/' + encodeURIComponent(img))
   .query({
-    ms: 1000
-  })
-  .expect(200)
-  .expect('Content-Type', 'image/jpeg')
-  .end(done);
-})
-
-it('GET /:url?ms=xxxx', function (done) {
-  request(server)
-  .get('/' + encodeURIComponent(img))
-  .query({
-    ms: 1512
+    ms: Math.ceil(1000 * Math.random())
   })
   .expect(200)
   .expect('Content-Type', 'image/jpeg')
@@ -50,6 +39,9 @@ it('GET /:encryptedUrl?frame=', function (done) {
 
   request(server)
   .get('/' + Buffer.concat(buffers).toString('hex'))
+  .query({
+    frame: Math.ceil(1000 * Math.random())
+  })
   .expect(200)
   .expect('Content-Type', 'image/jpeg')
   .end(done);
