@@ -1,8 +1,15 @@
 node_js:
-- "iojs"
+- iojs
 language: node_js
-script: "npm run-script test-travis"
-after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
+script: npm run-script test-travis
+after_script: npm install coveralls@2 && cat ./coverage/lcov.info | coveralls
 before_install:
-  - curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | sudo bash -
-  - curl http://ffmpeg.gusari.org/static/64bit/ffmpeg.static.64bit.latest.tar.gz | sudo tar -C /usr/local/bin/ -xvz
+- curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | sudo
+  bash -
+- curl http://ffmpeg.gusari.org/static/64bit/ffmpeg.static.64bit.latest.tar.gz | sudo
+  tar -C /usr/local/bin/ -xvz
+env:
+  global:
+  - secure: 2uGXMa06iD/YKCIBurXYTAQDg+nQnNx/CnbEb3/pano/gYAgoA8VLeHZ3gpXDizpMyKqIH0adT9dz3IThH4iju16zJPA6uAlzB3d3CAHqzYe8MTGnIwwov06VdpSVi/1NrF0CpIpchQqI7hyLuRqStWXgpnBcAZIuGf/auxFpzE=
+  - secure: Y7wADjpIWqRfnOxngiT+BbuPo6r3M6N6uL87FnFWhn8BjWAGlmaFHdqS8qYXcMJcr5KaVP+5UqI0ZTzRmRvqa+7Ny0ZckZyWDaZcAdb29W+hNYMBamx/O+lvplGIIKfmOlIM8yjUH6HcLGCDIsKQAJl/LXBG+isApKxlFZw8HIc=
+  - secure: KSXsmlttGLy0mCBRovGkonx3oUg1tQOn67YyjvA/9/0UjOfEGTsFN64Umdafd+AV+DV9totuwae/iaT8T61Az/HKdGAQXxe8EGuT6X5j5w98t431RBTai/hV4M6CnOAiWo9PE2hF05/wHIk9aiv/BwBE7PxUj1TDz278lxn4i/E=
