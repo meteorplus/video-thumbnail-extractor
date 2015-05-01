@@ -6,8 +6,7 @@ after_script: npm install coveralls@2 && cat ./coverage/lcov.info | coveralls
 before_install:
 - curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | sudo
   bash -
-- curl http://ffmpeg.gusari.org/static/64bit/ffmpeg.static.64bit.latest.tar.gz | sudo
-  tar -C /usr/local/bin/ -xvz
+- curl http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz | sudo tar -C /usr/local/bin/ -xJ --strip-components=1
 env:
   global:
   - secure: 2uGXMa06iD/YKCIBurXYTAQDg+nQnNx/CnbEb3/pano/gYAgoA8VLeHZ3gpXDizpMyKqIH0adT9dz3IThH4iju16zJPA6uAlzB3d3CAHqzYe8MTGnIwwov06VdpSVi/1NrF0CpIpchQqI7hyLuRqStWXgpnBcAZIuGf/auxFpzE=
