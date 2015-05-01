@@ -7,7 +7,6 @@
 [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
-[![Gittip][gittip-image]][gittip-url]
 
 Dynamically extract thumbnails and tags from an image.
 
@@ -57,5 +56,3 @@ Now accessing `encrypt(url) + '?frame=' + index` will return the image at a spec
 [license-url]: LICENSE
 [downloads-image]: http://img.shields.io/npm/dm/video-thumbnail-extractor.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/video-thumbnail-extractor
-[gittip-image]: https://img.shields.io/gratipay/jonathanong.svg?style=flat-square
-[gittip-url]: https://gratipay.com/jonathanong/
