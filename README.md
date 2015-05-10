@@ -8,16 +8,16 @@
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
-Dynamically extract thumbnails and tags from an image.
+Dynamically extract thumbnails from videos with optional cropping.
 
-## GET /:url?frame=&x=&y=&width=&height=
+## GET /:url?frame=&x=&y=&width=&height=&maxsize=
 
 `url` should be `encodeURIComponent`ed.
 `frame` defaults to `0`.
 `x`, `y`, `width`, and `height` must all be defined to be valid.
 Returns a `jpeg` image.
 
-## GET /:encryptedUrl?frame=&x=&y=&width=&height=
+## GET /:encryptedUrl?frame=&x=&y=&width=&height=&maxsize=
 
 Same as above, but with encrypting the URLs instead of encoding.
 This is so people don't know the original video URL as well as not allow arbitrary videos.
