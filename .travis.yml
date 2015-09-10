@@ -12,3 +12,16 @@ env:
   - secure: 2uGXMa06iD/YKCIBurXYTAQDg+nQnNx/CnbEb3/pano/gYAgoA8VLeHZ3gpXDizpMyKqIH0adT9dz3IThH4iju16zJPA6uAlzB3d3CAHqzYe8MTGnIwwov06VdpSVi/1NrF0CpIpchQqI7hyLuRqStWXgpnBcAZIuGf/auxFpzE=
   - secure: Y7wADjpIWqRfnOxngiT+BbuPo6r3M6N6uL87FnFWhn8BjWAGlmaFHdqS8qYXcMJcr5KaVP+5UqI0ZTzRmRvqa+7Ny0ZckZyWDaZcAdb29W+hNYMBamx/O+lvplGIIKfmOlIM8yjUH6HcLGCDIsKQAJl/LXBG+isApKxlFZw8HIc=
   - secure: KSXsmlttGLy0mCBRovGkonx3oUg1tQOn67YyjvA/9/0UjOfEGTsFN64Umdafd+AV+DV9totuwae/iaT8T61Az/HKdGAQXxe8EGuT6X5j5w98t431RBTai/hV4M6CnOAiWo9PE2hF05/wHIk9aiv/BwBE7PxUj1TDz278lxn4i/E=
+env:
+  - CXX=g++-4.8
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+before_install:
+  - export JOBS=max
+  - export prebuild_compile=true
