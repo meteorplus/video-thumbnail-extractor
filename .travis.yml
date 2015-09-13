@@ -7,6 +7,8 @@ before_install:
 - curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | sudo
   bash -
 - curl http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz | sudo tar -C /usr/local/bin/ -xJ --strip-components=1
+- export JOBS=max
+- export prebuild_compile=true
 env:
   global:
   - CXX=g++-4.8
@@ -22,7 +24,3 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-
-before_install:
-  - export JOBS=max
-  - export prebuild_compile=true
