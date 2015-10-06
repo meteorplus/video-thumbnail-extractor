@@ -1,0 +1,25 @@
+{
+  "name":"video-thumbnail-extractor",
+  "scripts":{},
+  "env":{
+    "AWS_ACCESS_KEY_ID":{
+      "required":true
+    },
+    "AWS_SECRET_ACCESS_KEY":{
+      "required":true
+    },
+    "BUCKET":{
+      "required":true
+    },
+    "BUILDPACK_URL":{
+      "required":true
+    },
+    "NODE_ENV":{
+      "required":true
+    },
+    "PASSWORD":{
+      "required":true
+    }
+  },
+  "addons":[]
+}
